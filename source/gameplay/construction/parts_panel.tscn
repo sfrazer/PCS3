@@ -1,0 +1,169 @@
+[gd_scene load_steps=2 format=3 uid="uid://parts_panel"]
+
+[ext_resource type="Script" path="res://source/gameplay/construction/parts_panel.gd" id="1_panel"]
+
+[node name="PartsPanel" type="VBoxContainer"]
+theme_override_constants/separation = 0
+script = ExtResource("1_panel")
+
+[node name="PartsScrollArea" type="ScrollContainer" parent="."]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 220)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="PartsGrid" type="GridContainer" parent="PartsScrollArea"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 3
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+
+[node name="bumper" type="Button" parent="PartsScrollArea/PartsGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(60, 60)
+text = "Bumper"
+clip_text = true
+
+[node name="slingshot" type="Button" parent="PartsScrollArea/PartsGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(60, 60)
+text = "Slingshot"
+clip_text = true
+
+[node name="drop_target" type="Button" parent="PartsScrollArea/PartsGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(60, 60)
+text = "Drop Target"
+clip_text = true
+
+[node name="half_bumper" type="Button" parent="PartsScrollArea/PartsGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(60, 60)
+text = "Half Bumper"
+clip_text = true
+
+[node name="spinner" type="Button" parent="PartsScrollArea/PartsGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(60, 60)
+text = "Spinner"
+clip_text = true
+
+[node name="tunnel" type="Button" parent="PartsScrollArea/PartsGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(60, 60)
+text = "Tunnel"
+clip_text = true
+
+[node name="collector" type="Button" parent="PartsScrollArea/PartsGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(60, 60)
+text = "Collector"
+clip_text = true
+
+[node name="flipper_left" type="Button" parent="PartsScrollArea/PartsGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(60, 60)
+text = "Flipper L"
+clip_text = true
+
+[node name="flipper_right" type="Button" parent="PartsScrollArea/PartsGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(60, 60)
+text = "Flipper R"
+clip_text = true
+
+[node name="plunger" type="Button" parent="PartsScrollArea/PartsGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(60, 60)
+text = "Plunger"
+clip_text = true
+
+[node name="rollover" type="Button" parent="PartsScrollArea/PartsGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(60, 60)
+text = "Rollover"
+clip_text = true
+
+[node name="rollover_edge" type="Button" parent="PartsScrollArea/PartsGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(60, 60)
+text = "Roll Edge"
+clip_text = true
+
+[node name="polygon" type="Button" parent="PartsScrollArea/PartsGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(60, 60)
+text = "Polygon"
+clip_text = true
+
+[node name="InfoPanel" type="PanelContainer" parent="."]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 60)
+size_flags_horizontal = 3
+
+[node name="InfoLabel" type="Label" parent="InfoPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Hover a part for info"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="IconCommands" type="GridContainer" parent="."]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 80)
+size_flags_horizontal = 3
+columns = 4
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+
+[node name="Hand" type="Button" parent="IconCommands"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hand"
+clip_text = true
+
+[node name="Polygon" type="Button" parent="IconCommands"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Polygon"
+clip_text = true
+
+[node name="Paint" type="Button" parent="IconCommands"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Paint"
+clip_text = true
+
+[node name="Play" type="Button" parent="IconCommands"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Play"
+clip_text = true
+
+[node name="Magnifier" type="Button" parent="IconCommands"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Magnify"
+clip_text = true
+
+[node name="World" type="Button" parent="IconCommands"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "World"
+clip_text = true
+
+[node name="ANDGate" type="Button" parent="IconCommands"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "AND"
+clip_text = true
+
+[node name="Disk" type="Button" parent="IconCommands"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Disk"
+clip_text = true
