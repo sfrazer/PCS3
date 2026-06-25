@@ -1,5 +1,7 @@
 # Git LFS — binary assets
 # Run `brew install git-lfs && git lfs install` once before adding any binary files
+# addons/ is excluded so GUT icons don't go through LFS
+addons/**/*.png -filter -diff -merge text
 *.png filter=lfs diff=lfs merge=lfs -text
 *.wav filter=lfs diff=lfs merge=lfs -text
 *.ogg filter=lfs diff=lfs merge=lfs -text
