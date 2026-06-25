@@ -65,7 +65,7 @@ trap cleanup EXIT
 
 ARGS=("--path" "$PROJECT_ROOT")
 if [[ -n "$SCENE" ]]; then
-  ARGS+=("--main-scene" "$SCENE")
+  ARGS+=("--scene" "$SCENE")
 fi
 
 export SCREENSHOT_PATH="$OUTPUT"

@@ -1,12 +1,13 @@
 extends Node
 
-# Autoload: captures a screenshot after one rendered frame then quits.
+# Autoload: captures a screenshot after WAIT_FRAMES rendered frames then quits.
 # Activated by godot_screenshot.sh via a temporary project.godot override.
-# Output path is read from the OS environment variable SCREENSHOT_PATH,
+# Output path is read from OS environment variable SCREENSHOT_PATH,
 # defaulting to /tmp/godot_screenshot.png.
 
-var _frames_waited: int = 0
 const WAIT_FRAMES: int = 8
+
+var _frames_waited: int = 0
 
 
 func _process(_delta: float) -> void:

@@ -28,10 +28,10 @@ Branch: `phase-1-scaffold`
 - [ ] **1.3** Add input actions to Input Map: `flip_left` (Z), `flip_right` (/), `launch` (Space), `restart` (Ctrl+R), `debug_quit` (Escape). Map each to keyboard.
   - *Verify:* All 5 actions visible in Project Settings → Input Map with correct key bindings.
 
-- [ ] **1.4** Create `source/core/main.tscn` as a Node2D (MainGame) containing an HBoxContainer child that fills the viewport. Left child: 440px wide (playfield placeholder). Right child: 200px wide (panel placeholder). Set `process_mode = Always` on root.
+- [ ] **1.4** Create `source/core/main.tscn` as a **Control** root (not Node2D — HBoxContainer anchors require a Control parent) containing an HBoxContainer child that fills the viewport. Left child: 440px wide (playfield placeholder). Right child: 200px wide (panel placeholder). Set `process_mode = 3` (ALWAYS) on root.
   - *Verify:* Scene opens; two columns visible at correct proportions.
 
-- [ ] **1.5** Create `source/gameplay/construction/playfield.tscn` as a Node2D. In `_draw()`: fill the background black; draw a 3px magenta border inset from the edges.
+- [ ] **1.5** Create `source/gameplay/construction/playfield.tscn` as a **Control** (not Node2D — must be Control to anchor-fill inside the HBoxContainer). In `_draw()`: fill the background black; draw a 3px magenta border inset from the edges. Set `mouse_filter = 0` (STOP) in the scene; do not set it again in `_ready()`.
   - *Verify:* Screenshot shows black playfield with magenta border. Run: `source/debug/tests/godot_screenshot.sh --preview res://source/core/main.tscn /tmp/phase1.png`
 
 - [ ] **1.6** Draw a bumper (filled circle, ring outline, highlight dot) and a left flipper (tapered wedge) directly in `playfield.gd _draw()` as hardcoded shapes at fixed positions.

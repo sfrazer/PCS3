@@ -17,7 +17,8 @@ Physics nodes (`RigidBody2D`, active `StaticBody2D`, `Area2D` monitoring) are **
 ## Module Responsibilities
 
 ### `source/core/main.gd`
-- Application root and mode switcher
+- Application root and mode switcher (extends `Control`, not `Node2D`)
+- `Control` root is required so HBoxContainer children can use anchor-fill layout; a `Node2D` root does not propagate anchors to Control children
 - Owns the scene tree layer structure (World, HUD, Transition, Debug CanvasLayers)
 - Calls `editor.activate()` or `game.activate()` on mode switch
 - Must not contain game logic — it is a coordinator only
