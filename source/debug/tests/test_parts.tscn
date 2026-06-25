@@ -1,0 +1,60 @@
+[gd_scene load_steps=14 format=3 uid="uid://test_parts"]
+
+[ext_resource type="PackedScene" path="res://source/gameplay/parts/bumper.tscn" id="01_bumper"]
+[ext_resource type="PackedScene" path="res://source/gameplay/parts/slingshot.tscn" id="02_slingshot"]
+[ext_resource type="PackedScene" path="res://source/gameplay/parts/drop_target.tscn" id="03_drop_target"]
+[ext_resource type="PackedScene" path="res://source/gameplay/parts/half_bumper.tscn" id="04_half_bumper"]
+[ext_resource type="PackedScene" path="res://source/gameplay/parts/spinner.tscn" id="05_spinner"]
+[ext_resource type="PackedScene" path="res://source/gameplay/parts/tunnel.tscn" id="06_tunnel"]
+[ext_resource type="PackedScene" path="res://source/gameplay/parts/collector.tscn" id="07_collector"]
+[ext_resource type="PackedScene" path="res://source/gameplay/parts/flipper.tscn" id="08_flipper"]
+[ext_resource type="PackedScene" path="res://source/gameplay/parts/plunger.tscn" id="09_plunger"]
+[ext_resource type="PackedScene" path="res://source/gameplay/parts/rollover.tscn" id="10_rollover"]
+[ext_resource type="PackedScene" path="res://source/gameplay/parts/rollover_edge.tscn" id="11_rollover_edge"]
+[ext_resource type="PackedScene" path="res://source/gameplay/parts/polygon_wall.tscn" id="12_polygon_wall"]
+
+[node name="TestParts" type="Node2D"]
+
+[node name="BG" type="ColorRect" parent="."]
+color = Color(0.05, 0.05, 0.05, 1)
+size = Vector2(640, 360)
+
+[node name="Bumper" parent="." instance=ExtResource("01_bumper")]
+position = Vector2(60, 55)
+
+[node name="Slingshot" parent="." instance=ExtResource("02_slingshot")]
+position = Vector2(170, 55)
+
+[node name="DropTarget" parent="." instance=ExtResource("03_drop_target")]
+position = Vector2(280, 55)
+
+[node name="HalfBumper" parent="." instance=ExtResource("04_half_bumper")]
+position = Vector2(390, 55)
+
+[node name="Spinner" parent="." instance=ExtResource("05_spinner")]
+position = Vector2(500, 55)
+
+[node name="Tunnel" parent="." instance=ExtResource("06_tunnel")]
+position = Vector2(60, 155)
+
+[node name="Collector" parent="." instance=ExtResource("07_collector")]
+position = Vector2(170, 155)
+
+[node name="FlipperLeft" parent="." instance=ExtResource("08_flipper")]
+position = Vector2(250, 155)
+
+[node name="FlipperRight" parent="." instance=ExtResource("08_flipper")]
+position = Vector2(390, 155)
+is_right = true
+
+[node name="Plunger" parent="." instance=ExtResource("09_plunger")]
+position = Vector2(500, 155)
+
+[node name="Rollover" parent="." instance=ExtResource("10_rollover")]
+position = Vector2(80, 270)
+
+[node name="RolloverEdge" parent="." instance=ExtResource("11_rollover_edge")]
+position = Vector2(200, 270)
+
+[node name="PolygonWall" parent="." instance=ExtResource("12_polygon_wall")]
+position = Vector2(320, 270)
