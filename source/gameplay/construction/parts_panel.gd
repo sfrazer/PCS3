@@ -35,6 +35,12 @@ func _connect_part_buttons() -> void:
 			continue
 		var button := child as Button
 		var type: String = button.name
+		button.text = ""
+		var icon := PartIcon.new()
+		icon.part_type = type
+		icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		icon.set_anchors_preset(Control.PRESET_FULL_RECT)
+		button.add_child(icon)
 		button.mouse_entered.connect(func() -> void: _on_part_hovered(type))
 		button.pressed.connect(func() -> void: part_type_selected.emit(type))
 
