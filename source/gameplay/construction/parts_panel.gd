@@ -4,19 +4,19 @@ signal part_type_selected(type: String)
 signal tool_selected(tool_name: String)
 
 const PART_DESCRIPTIONS: Dictionary = {
-	"bumper": "Pop bumper — bounces ball in all directions. Scores on each hit.",
-	"slingshot": "Slingshot — applies directional kick. Scores on each hit.",
+	"bumper": "Pop bumper — bounces ball on all faces. Scores on hit.",
+	"slingshot": "Slingshot — directional kick on impact. Scores on hit.",
 	"drop_target": "Drop target — falls when hit, resets each ball.",
-	"half_bumper": "Half bumper — bounces only on one face. Scores on hit.",
-	"spinner": "Spinner — rotates as ball passes through. Scores per rotation.",
-	"tunnel": "Tunnel — ball passes through channel. Scores on entry and exit.",
-	"collector": "Collector — deflects ball left or right. Scores on contact.",
+	"half_bumper": "Half bumper — bounces on one face only. Scores on hit.",
+	"spinner": "Spinner — rotates as ball passes. Scores per spin.",
+	"tunnel": "Tunnel — ball passes through channel. Scores on entry.",
+	"collector": "Collector — deflects ball left or right. Scores on hit.",
 	"flipper_left": "Left flipper — player-controlled. Press Z to activate.",
 	"flipper_right": "Right flipper — player-controlled. Press / to activate.",
-	"plunger": "Plunger — hold Space to compress, release to fire the ball.",
-	"rollover": "Rollover — flat switch ball rolls over. Scores on contact.",
+	"plunger": "Plunger — hold Space to compress, release to fire.",
+	"rollover": "Rollover — flat switch ball rolls over. Scores on hit.",
 	"rollover_edge": "Rollover edge — angled edge rollover switch.",
-	"polygon": "Polygon — custom wall or guide shape. Draw with Polygon tool.",
+	"polygon": "Polygon — custom wall shape. Draw with Polygon tool.",
 }
 
 @onready var _parts_grid: GridContainer = $PartsScrollArea/PartsGrid
